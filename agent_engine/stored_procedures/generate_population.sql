@@ -6,9 +6,13 @@ AS $$
     configs = json.loads(json_configs)
 
     def create_population(name, node, agent_count):
+
         if  "sub populations" not in node:
             for i in range(agent_count):
-                cursor = plpy.execute(f"""insert into {configs['setup']['create table name']} (house_hold_type, state) values ( '{name}', '{json.dumps(node).replace("'", "''")}' )""")
+                new_agent = agent_loader( name, json.dumps(node) )
+
+                cursor = plpy.execute(f"""insert into {configs['setup']['create table name']} 
+                        (house_hold_type, state) values ( '{name}', '{json.dumps(new_agent.state).replace("'", "''")}' )""")
             return
         for sub_pop in node["sub populations"]:
             create_population( f"{name}.{sub_pop['name']}", node[ sub_pop['name'] ] , round(float( sub_pop[ "percent total population"]) *  agent_count) )

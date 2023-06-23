@@ -6,30 +6,30 @@ select * from generate_population('{
     },
     "populations" : [
                         {"name" : "married", "percent total population" : ".482"},
-                        {"name" : "single male", "percent total population" : ".048"},
-                        {"name" : "single female", "percent total population" : ".129"},
+                        {"name" : "single_male", "percent total population" : ".048"},
+                        {"name" : "single_female", "percent total population" : ".129"},
                         {"name" : "individual", "percent total population" : ".277"},
-                        {"name" : "non family", "percent total population" : ".064"}
+                        {"name" : "non_family", "percent total population" : ".064"}
     ],
-    "population count" : "130",
+    "population count" : "1300",
     "married" : {
                     "sub populations" : [
-                                            { "name" : "dual income" , "percent total population": ".53" },
-                                            { "name" : "single income" , "percent total population": ".47" }
+                                            { "name" : "dual_income" , "percent total population": ".53" },
+                                            { "name" : "single_income" , "percent total population": ".47" }
                                         ],
-                    "dual income": {
+                    "dual_income": {
                     },
-                    "single income": {
+                    "single_income": {
                     }
     },
-    "single male" : {
+    "single_male" : {
                         "sub populations" : [
                                                 { "name" : "base" , "percent total population": "1" }
                                             ],
                         "base" : {}
                     
     },
-    "single female" : {
+    "single_female" : {
                         "sub populations" : [
                                                 { "name" : "base" , "percent total population": "1" }
                                             ],
@@ -43,7 +43,7 @@ select * from generate_population('{
                         "base" : {}
                     
     },
-    "non family" : {
+    "non_family" : {
                         "sub populations" : [
                                                 { "name" : "base" , "percent total population": "1" }
                                             ],
