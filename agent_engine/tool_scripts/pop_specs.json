@@ -1,4 +1,4 @@
-select * from generate_population('{
+{
     "setup": {
         "create table name" : "hello_usa",
         "column spec" : "(h_id uuid PRIMARY KEY DEFAULT gen_random_uuid(), house_hold_type text, state json)",
@@ -11,7 +11,7 @@ select * from generate_population('{
                         {"name" : "individual", "percent total population" : ".277"},
                         {"name" : "non_family", "percent total population" : ".064"}
     ],
-    "population count" : "1300",
+    "population count" : "130000000",
     "married" : {
                     "sub populations" : [
                                             { "name" : "dual_income" , "percent total population": ".53" },
@@ -50,4 +50,4 @@ select * from generate_population('{
                         "base" : {}
                     
     }
-}', true);
+}

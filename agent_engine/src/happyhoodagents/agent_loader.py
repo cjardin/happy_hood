@@ -8,6 +8,7 @@ from happyhoodagents.agents.non_family import non_family
 from happyhoodagents.agents.single_female import single_female
 from happyhoodagents.agents.single_male import single_male
 from happyhoodagents.agents.married import married
+from happyhoodagents.agents.individual import individual
 
 class agent_loader:
   def __init__(self, agent_class, state):
@@ -16,9 +17,9 @@ class agent_loader:
 
     if agent_class == "married":
         self.agent_class = married(state)
-    elif agent_class == "married_dual_income":
+    elif agent_class == "married.dual_income":
         self.agent_class = married_dual_income(state)
-    elif agent_class == "married_single_income":
+    elif agent_class == "married.single_income":
         self.agent_class = married_single_income(state)
     elif agent_class == "non_family":
         self.agent_class = non_family(state)
@@ -26,7 +27,8 @@ class agent_loader:
         self.agent_class = single_male(state)
     elif agent_class == "single_female":
         self.agent_class = single_female(state)        
-  
+    elif agent_class == "individual":
+        self.agent_class = individual(state) 
 
 if __name__ == "__main__":
     a = agent_loader( "foo", "{}")
