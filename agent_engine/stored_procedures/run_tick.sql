@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION run_tick(state text, class_name text) RETURNS json
+CREATE OR REPLACE FUNCTION run_tick(state json, class_name text) RETURNS json
 IMMUTABLE
 PARALLEL SAFE
 AS $$
@@ -7,7 +7,7 @@ AS $$
 
     agent = agent_loader( class_name, state )
 
-    agent.execute_tick()
+    agent.agent_class.execute_tick()
 
     return json.dumps(agent.state)
 
