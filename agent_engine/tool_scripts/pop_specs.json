@@ -18,43 +18,133 @@
                                             { "name" : "single_income" , "percent total population": ".47" }
                                         ],
                     "dual_income": {
+
                         "income" : {
-                                    "population_probability" : [ ".20", ".60" , ".20"],
+                                    "population_probability" : [ ".29", ".50" , ".21"],
                                     "population_names" : [ "poverty", "middle", "upper"],
                                     "distribution_type" : ["normal", "normal", "power"],
-                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "40000"], ["300000", "200000"] ]
-                        }
+                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "40000"], ["5", "1000000"]  ]
+                        },
+                        "individuals" : {
+                             "total" : ["2", "2", "3", "3", "3", "2", "2", "3", "3", "3","2", "2", "3", "3", "3","4", "5", "6", "7", "8", "9", "10"],
+                                    "age" : {
+                                        "population_probability" : [ ".22", ".359" , ".252", ".168"],
+                                        "population_names" : [ "under 18", "18-44", "45-64", "over 65"],
+                                        "distribution_type" : ["normal", "normal", "normal", "normal"],
+                                        "distribution_params" : [ [ "9", "8"], ["32", "15"], ["51", "15"], ["81", "15" ]]
+                                    }
+                            }   
 
                     },
                     "single_income": {
+                        "income" : {
+                                    "population_probability" : [ ".29", ".50" , ".21"],
+                                    "population_names" : [ "poverty", "middle", "upper"],
+                                    "distribution_type" : ["normal", "normal", "power"],
+                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "40000"], ["5", "1000000"]  ]
+                        },  
+                        "individuals" : { 
+                             "total" : ["2", "2", "3", "3", "3", "2", "2", "3", "3", "3","2", "2", "3", "3", "3","4", "5", "6", "7", "8", "9", "10"],
+                                    "age" : { 
+                                        "population_probability" : [ ".22", ".359" , ".252", ".168"],
+                                        "population_names" : [ "under 18", "18-44", "45-64", "over 65"],
+                                        "distribution_type" : ["normal", "normal", "normal", "normal"],
+                                        "distribution_params" : [ [ "9", "8"], ["32", "15"], ["51", "15"], ["81", "15" ]]
+                                    }   
+                            }  
                     }
     },
     "single_male" : {
                         "sub populations" : [
                                                 { "name" : "base" , "percent total population": "1" }
                                             ],
-                        "base" : {}
+                        "base" : {
+                            "income" : {
+                                    "population_probability" : [ ".29", ".50" , ".21"],
+                                    "population_names" : [ "poverty", "middle", "upper"],
+                                    "distribution_type" : ["normal", "normal", "power"],
+                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "40000"], ["5", "1000000"]  ]
+                            },
+                            "individuals" : {
+                                    "total" : ["1"],
+                                    "age" : {
+                                        "population_probability" : [ ".42" , ".35", ".23"],
+                                        "population_names" : [ "18-44", "45-64", "over 65"],
+                                        "distribution_type" : [ "normal", "normal", "normal"],
+                                        "distribution_params" : [ ["32", "14"], ["51", "16"], ["81", "15" ]]
+                                    }
+                            }
+                        }
                     
     },
     "single_female" : {
                         "sub populations" : [
                                                 { "name" : "base" , "percent total population": "1" }
                                             ],
-                        "base" : {}
+                        "base" : {
+                            "income" : {
+                                    "population_probability" : [ ".29", ".50" , ".21"],
+                                    "population_names" : [ "poverty", "middle", "upper"],
+                                    "distribution_type" : ["normal", "normal", "power"],
+                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "40000"], ["5", "1000000"]  ]
+                            },  
+                            "individuals" : { 
+                                    "total" : ["1"],
+                                    "age" : {
+                                        "population_probability" : [ ".42" , ".35", ".23"],
+                                        "population_names" : [ "18-44", "45-64", "over 65"],
+                                        "distribution_type" : [ "normal", "normal", "normal"],
+                                        "distribution_params" : [ ["32", "14"], ["51", "16"], ["81", "15" ]]
+                                    }
+                            }
+                        }
                     
     },
     "individual" : {
                         "sub populations" : [
                                                 { "name" : "base" , "percent total population": "1" }
                                             ],
-                        "base" : {}
+                        "base" : {
+                           "income" : {
+                                    "population_probability" : [ ".29", ".50" , ".21"],
+                                    "population_names" : [ "poverty", "middle", "upper"],
+                                    "distribution_type" : ["normal", "normal", "power"],
+                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "40000"], ["5", "1000000"]  ]
+                            },  
+                            "individuals" : { 
+                                    "total" : ["1"],
+                                    "age" : {
+                                        "population_probability" : [ ".42" , ".35", ".23"],
+                                        "population_names" : [ "18-44", "45-64", "over 65"],
+                                        "distribution_type" : [ "normal", "normal", "normal"],
+                                        "distribution_params" : [ ["32", "14"], ["51", "16"], ["81", "16" ]]
+                                    }
+                            }
+                        }
                     
     },
     "non_family" : {
                         "sub populations" : [
                                                 { "name" : "base" , "percent total population": "1" }
                                             ],
-                        "base" : {}
+                        "base" : {
+                            "income" : {
+                                    "population_probability" : [ ".29", ".50" , ".21"],
+                                    "population_names" : [ "poverty", "middle", "upper"],
+                                    "distribution_type" : ["normal", "normal", "power"],
+                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "40000"], ["5", "1000000"]  ]
+                            },
+                            "individuals" : {
+                             "total" : ["2", "2", "3", "3", "3", "2", "2", "3", "3", "3","2", "2", "3", "3", "3","4", "5", "6", "7", "8", "9", "10"],
+                                    "age" : {
+                                        "population_probability" : [ ".22", ".359" , ".252", ".168"],
+                                        "population_names" : [ "under 18", "18-44", "45-64", "over 65"],
+                                        "distribution_type" : ["normal", "normal", "normal", "normal"],
+                                        "distribution_params" : [ [ "9", "8"], ["32", "15"], ["51", "15"], ["81", "15" ]]
+                                    }
+                            }
+                        
+                        }
                     
     }
 }

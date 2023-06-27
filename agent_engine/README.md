@@ -3,4 +3,4 @@ python3 -m build
 
 
 sudo su 
-pip3 install dist/happyhoodagents-0.0.4-py3-none-any.whl --force-reinstall
+pip3 install dist/happyhoodagents-0.0.5-py3-none-any.whl --force-reinstall

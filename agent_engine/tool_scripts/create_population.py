@@ -15,7 +15,7 @@ def create_population(name, node, agent_count,cursor):
         for i in range(agent_count):
             new_agent = agent_loader( name, json.dumps(node) )
             cursor.execute(f"""insert into {configs['setup']['create table name']} 
-                        (house_hold_type, state) values ( '{name}', '{json.dumps(new_agent.state).replace("'", "''")}' )""")
+                        (house_hold_type, state) values ( '{name}', '{json.dumps(new_agent.agent_class.state).replace("'", "''")}' )""")
         return  
 
     for sub_pop in node["sub populations"]:
