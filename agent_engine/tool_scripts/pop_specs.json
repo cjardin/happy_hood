@@ -1,7 +1,7 @@
 {
     "setup": {
         "create table name" : "hello_usa",
-        "column spec" : "(h_id uuid PRIMARY KEY DEFAULT gen_random_uuid(), house_hold_type text, state json)",
+        "column spec" : "(h_id SERIAL PRIMARY KEY, house_hold_type text, state json)",
         "state column name" : "state"
     },
     "populations" : [
