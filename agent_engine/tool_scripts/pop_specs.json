@@ -18,6 +18,13 @@
                                             { "name" : "single_income" , "percent total population": ".47" }
                                         ],
                     "dual_income": {
+                        "income" : {
+                                    "population_probability" : [ ".20", ".60" , ".20"],
+                                    "population_names" : [ "poverty", "middle", "upper"],
+                                    "distribution_type" : ["normal", "normal", "power"],
+                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "40000"], ["300000", "200000"] ]
+                        }
+
                     },
                     "single_income": {
                     }
