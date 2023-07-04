@@ -1,9 +1,20 @@
 {
     "setup": {
-        "create table name" : "hello_usa",
+        "create table name" : "usa_households",
         "column spec" : "(h_id SERIAL PRIMARY KEY, house_hold_type text, state json)",
         "state column name" : "state"
     },
+    "per tick" : {
+                        "births" : "324000",
+                        "deaths" : "235636",
+                        "migrant": "83612",
+                        "death selection":{
+                            "population_probability" : [ ".2", ".05" , ".2", ".05" , ".50"],
+                            "population_names" : [ ["0", "3"], ["3", "14"],  ["14", "35"], ["35", "60"], ["60", "400"] ],
+                            "distribution_params" : [ [ "3", "2"], ["9", "5"], ["25", "10"], ["45", "15" ], ["5", "140"]],
+                            "distribution_type" : ["normal", "normal", "normal", "normal", "power"]
+                        }
+                 },
     "populations" : [
                         {"name" : "married", "percent total population" : ".482"},
                         {"name" : "single_male", "percent total population" : ".048"},
@@ -23,7 +34,7 @@
                                     "population_probability" : [ ".29", ".50" , ".21"],
                                     "population_names" : [ "poverty", "middle", "upper"],
                                     "distribution_type" : ["normal", "normal", "power"],
-                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "40000"], ["5", "1000000"]  ]
+                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "30000"], ["5", "1000000"]  ]
                         },
                         "individuals" : {
                              "total" : ["2", "2", "2", "2", "2", "2", "2", "3", "3", "3","2", "2", "3", "3", "3","4", "5", "6", "7", "8", "9", "10"],
@@ -41,7 +52,7 @@
                                     "population_probability" : [ ".29", ".50" , ".21"],
                                     "population_names" : [ "poverty", "middle", "upper"],
                                     "distribution_type" : ["normal", "normal", "power"],
-                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "40000"], ["5", "1000000"]  ]
+                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "30000"], ["5", "1000000"]  ]
                         },  
                         "individuals" : { 
                              "total" : ["2", "2", "2", "2", "2", "2", "2", "3", "3", "3","2", "2", "3", "3", "3","4", "5", "6", "7", "8", "9", "10"], 
@@ -63,7 +74,7 @@
                                     "population_probability" : [ ".29", ".50" , ".21"],
                                     "population_names" : [ "poverty", "middle", "upper"],
                                     "distribution_type" : ["normal", "normal", "power"],
-                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "40000"], ["5", "1000000"]  ]
+                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "30000"], ["5", "1000000"]  ]
                             },
                             "individuals" : {
                                     "total" : ["1"],
@@ -86,7 +97,7 @@
                                     "population_probability" : [ ".29", ".50" , ".21"],
                                     "population_names" : [ "poverty", "middle", "upper"],
                                     "distribution_type" : ["normal", "normal", "power"],
-                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "40000"], ["5", "1000000"]  ]
+                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "30000"], ["5", "1000000"]  ]
                             },  
                             "individuals" : { 
                                     "total" : ["1"],
@@ -109,7 +120,7 @@
                                     "population_probability" : [ ".29", ".50" , ".21"],
                                     "population_names" : [ "poverty", "middle", "upper"],
                                     "distribution_type" : ["normal", "normal", "power"],
-                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "40000"], ["5", "1000000"]  ]
+                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "30000"], ["5", "1000000"]  ]
                             },  
                             "individuals" : { 
                                     "total" : ["1"],
@@ -132,7 +143,7 @@
                                     "population_probability" : [ ".29", ".50" , ".21"],
                                     "population_names" : [ "poverty", "middle", "upper"],
                                     "distribution_type" : ["normal", "normal", "power"],
-                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "40000"], ["5", "1000000"]  ]
+                                    "distribution_params" : [ [ "40000", "20000"], ["70784", "30000"], ["5", "1000000"]  ]
                             },
                             "individuals" : {
                              "total" : ["2", "2", "2", "2", "2", "2", "2", "3", "3", "3","2", "2", "3", "3", "3","4", "5", "6", "7", "8", "9", "10"], 

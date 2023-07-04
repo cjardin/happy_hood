@@ -13,7 +13,7 @@ with open("pop_specs.json", "r") as a:
 def create_population(name, node, agent_count,cursor):
     if  "sub populations" not in node:
         for i in range(agent_count):
-            new_agent = agent_loader( name, json.dumps(node) )
+            new_agent = agent_loader( name, json.dumps(node), True)
             cursor.execute(f"""insert into {configs['setup']['create table name']} 
                         (house_hold_type, state) values ( '{name}', '{json.dumps(new_agent.agent_class.state).replace("'", "''")}' )""")
         return  

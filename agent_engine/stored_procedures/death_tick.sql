@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION run_tick(state json, class_name text) RETURNS json
+CREATE OR REPLACE FUNCTION death_tick(state json, class_name text, death_age float) RETURNS json
 IMMUTABLE
 PARALLEL SAFE
 AS $$
@@ -7,9 +7,8 @@ AS $$
 
     agent = agent_loader( class_name, state, False)
 
-    agent.agent_class.execute_tick()
+    return json.dumps( agent.agent_class.process_death( death_age ) )
 
-    return json.dumps(agent.agent_class.state)
 
 $$ LANGUAGE plpython3u;
 
