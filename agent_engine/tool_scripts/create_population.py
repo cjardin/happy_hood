@@ -36,6 +36,7 @@ if __name__ == "__main__":
     db, cur = get_db_instance()
 
     total_pop = int(configs["population count"])
+    print(f"Creating {total_pop}")
     chunks = round( total_pop / multiprocessing.cpu_count())
 
     #First.. Let's createe the table!

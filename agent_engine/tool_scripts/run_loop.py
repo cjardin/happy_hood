@@ -13,7 +13,6 @@ with open("pop_specs.json", "r") as a:
 
 def births():
     #single women, married, individual, other
-
     number_to_place = int(configs["per tick"]["births"])
     pass
 
@@ -94,8 +93,8 @@ def execute_parallel_update( function ):
 
 if __name__ == "__main__":
     #deaths()
-    execute_parallel_update(process_tick_actions)
-    #execute_parallel_update(state_update)
+    #execute_parallel_update(process_tick_actions)
+    execute_parallel_update(state_update)
     
 
 

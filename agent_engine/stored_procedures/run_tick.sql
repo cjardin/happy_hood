@@ -7,9 +7,8 @@ AS $$
 
     agent = agent_loader( class_name, state, False)
 
-    agent.agent_class.execute_tick()
+    return json.dumps(agent.agent_class.execute_tick())
 
-    return json.dumps(agent.agent_class.state)
 
 $$ LANGUAGE plpython3u;
 

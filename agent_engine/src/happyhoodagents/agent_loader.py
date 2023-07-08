@@ -31,7 +31,7 @@ class agent_loader:
         self.agent_class = individual(state, init_state) 
 
 if __name__ == "__main__":
-    a = agent_loader( "foo", "{}")
+    a = agent_loader( "foo", "{}", true)
     print(1)
         
 
