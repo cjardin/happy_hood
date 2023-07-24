@@ -13,6 +13,15 @@
                             "population_names" : [ ["0", "3"], ["3", "14"],  ["14", "35"], ["35", "60"], ["60", "400"] ],
                             "distribution_params" : [ [ "3", "2"], ["9", "5"], ["25", "10"], ["45", "15" ], ["5", "140"]],
                             "distribution_type" : ["normal", "normal", "normal", "normal", "power"]
+                        },
+                        "birth rate by age":{
+                            "source": "https://www.statista.com/statistics/241533/birth-rate-by-age-of-mother-in-the-us/"
+
+                        },
+                        "birth population selection":{
+                            "source" : "https://www.statista.com/statistics/241530/birth-rate-by-family-income-in-the-us/",
+                            "population_names" : [ "", "married.single_income", "individual.base", 
+                                        "non_family.base", "single_female.base", "single_male.base" ]
                         }
                  },
     "populations" : [
